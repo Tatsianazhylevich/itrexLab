@@ -1,0 +1,83 @@
+@import './components/restorePassword';
+@import './components/input';
+@import './components/warnings';
+@import './components/footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.body {
+    height: 1024px;
+    max-width: 1920px;
+}
+.container {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    background: url(../images/bg.jpg) no-repeat;
+} 
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 560px;
+    min-height: 100vh;
+    padding: 0 95px;
+    background-color: #F9FAFF;
+}
+
+.form-restorePassword {
+    justify-content: flex-start;
+    padding-top: 8vh;
+}
+
+/* Скрытие элементов */
+.hidden {
+    display: none;
+}
+
+/* =====================FORM====================== */
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.form-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: #202225;
+}
+
+.title-signUp {
+    margin-top: 90px;
+}
+.title-signIn {
+    margin-top: 18.2vh;
+}
+.title-restorePassword {
+    margin-top: 18.2vh;
+}
+
+.form-body {
+    margin: 20px 0;
+}
+
+#SignIn, #SignUp {
+    margin-left: 20px;
+}
+
+
+
+
+
+@import './global/media';

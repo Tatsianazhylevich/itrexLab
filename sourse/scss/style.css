@@ -1,0 +1,301 @@
+@charset "UTF-8";
+.form-restorePassword {
+  padding-top: 178px;
+}
+
+.title-restorePassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title-text {
+  margin-left: 16px;
+}
+
+.form-text {
+  width: 368px;
+  height: 38px;
+  margin: 32px 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 130%;
+  color: #A1ABC9;
+}
+
+#submit-restorePassword {
+  width: 214px;
+}
+
+input {
+  width: 368px;
+  height: 56px;
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 24px;
+  border: 1px solid #DCE0EC;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-email {
+  background: url(../images/Vector.png) no-repeat center left 20px;
+  padding-left: 63px;
+}
+
+.password {
+  position: relative;
+}
+
+.input-password {
+  background: url(../images/lock.png) no-repeat center left 20px;
+  padding-left: 63px;
+}
+
+.input-name {
+  background: url(../images/user.png) no-repeat center left 20px;
+  padding-left: 63px;
+}
+
+.password-control {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 39px;
+  right: 25px;
+  background: url(../images/eye-slash.png) no-repeat center;
+}
+
+.input-confirmPassword {
+  background: url(../images/check.png) no-repeat center left 20px;
+  padding-left: 63px;
+}
+
+.input-submit {
+  width: 146px;
+  height: 56px;
+  margin-top: 44px;
+  border-radius: 8px;
+  background: url(../images/angle-right-b.png) no-repeat center right 20px, #7297FF;
+  padding-right: 32px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.warning {
+  position: absolute;
+  top: 65px;
+}
+
+.warning-text {
+  margin: 20px 0;
+  font-size: 13px;
+  letter-spacing: -0.24px;
+  color: #F6657F;
+}
+
+.warningInput {
+  border: 1px solid #F6657F;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 85px;
+}
+
+.footer span {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 140%;
+  color: #A1ABC9;
+}
+
+.footer_signIn {
+  margin-top: 24vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.body {
+  height: 1024px;
+  max-width: 1920px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  background: url(../images/bg.jpg) no-repeat;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 560px;
+  min-height: 100vh;
+  padding: 0 95px;
+  background-color: #F9FAFF;
+}
+
+.form-restorePassword {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 8vh;
+}
+
+/* Скрытие элементов */
+.hidden {
+  display: none;
+}
+
+/* =====================FORM====================== */
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+  color: #202225;
+}
+
+.title-signUp {
+  margin-top: 90px;
+}
+
+.title-signIn {
+  margin-top: 18.2vh;
+}
+
+.title-restorePassword {
+  margin-top: 18.2vh;
+}
+
+.form-body {
+  margin: 20px 0;
+}
+
+#SignIn, #SignUp {
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 72px;
+    width: 100%;
+    padding: 0 5.5vh;
+    border-radius: 24px 24px 0px 0px;
+  }
+  .form-title {
+    margin-top: 6vh;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .form-body {
+    margin: 16px 0;
+  }
+  .form-text {
+    width: 100%;
+    height: 38px;
+    font-size: 12px;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    line-height: 140%;
+    margin: 12px 0;
+  }
+  .input-name {
+    background: url(../images/user.png) no-repeat center left 15px;
+    padding-left: 48px;
+  }
+  .input-email {
+    background: url(../images/Vector.png) no-repeat center left 15px;
+    padding-left: 48px;
+  }
+  .warning {
+    position: absolute;
+    top: 32px;
+    font-size: 13px;
+  }
+  .input-password,
+  .input-confirmPassword {
+    background: url(../images/lock.png) no-repeat center left 15px;
+    padding-left: 48px;
+  }
+  .password-control {
+    top: 20px;
+    right: 20px;
+  }
+  .input-submit {
+    width: 123px;
+    height: 46px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: url(../images/angle-right-b.png) no-repeat center right 16px, #7297FF;
+    padding-right: 30px;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 48px;
+  }
+  .footer a {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
