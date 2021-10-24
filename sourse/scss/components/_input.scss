@@ -6,14 +6,21 @@ input {
     line-height: 24px;
     border: 1px solid #DCE0EC;
     border-radius: 8px;
+ 
     outline: none;
     cursor: pointer;
+    &:focus {
+        border: 1px solid #7297FF;
+    }
 }
+
+
 
 
 .input-email {
     background: url(../images/Vector.png) no-repeat center left 20px;
     padding-left: 63px;
+    background-color: #FFFFFF;
 }
 .password {
 	position: relative;
@@ -22,12 +29,18 @@ input {
 .input-password {
     background: url(../images/lock.png) no-repeat center left 20px;
     padding-left: 63px;
+    background-color: #FFFFFF;
 }
 .input-name {
     background: url(../images/user.png) no-repeat center left 20px;
     padding-left: 63px;
+    background-color: #FFFFFF;
 }
-
+.input-confirmPassword {
+    background: url(../images/check.png) no-repeat center left 20px;
+    padding-left: 63px;
+    background-color: #FFFFFF;
+} 
 .password-control {
     position: absolute;
     display: inline-block;
@@ -38,10 +51,7 @@ input {
     background: url(../images/eye-slash.png) no-repeat center;
 
 }
-.input-confirmPassword {
-    background: url(../images/check.png) no-repeat center left 20px;
-    padding-left: 63px;
-} 
+
 .input-submit {
     width: 146px;
     height: 56px;
