@@ -23,16 +23,16 @@
 
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
                         <div>
-                            <input class="input-name" id="id" type="text" placeholder="First Name" required>
+                            <input class="input-name" id="id" type="text" placeholder="First Name" name="firstName" required>
                         </div>
                         <div>
-                            <input class="input-name" id="surname" type="text" placeholder="Last Name">
+                            <input class="input-name" id="surname" type="text" placeholder="Last Name" name="lastName" >
                         </div>
                         <div>
-                            <input class="input-email" id="email" type="text" placeholder="Email" required>
+                            <input class="input-email" id="email" type="text" placeholder="Email" name="email" required>
                         </div>
                         <div class="password">
-                            <input class="input-password" id="password" type="password" placeholder="Password" required>
+                            <input class="input-password" id="password" type="password" placeholder="Password" name="password" required>
                             <a href="#" class="password-control"></a>
                             <div class="warning hidden"><p class="warning-text">Password contain unsupported characters</p></div>
                         </div>
@@ -60,11 +60,11 @@
 
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
                         <div>
-                            <input class="input-email" id="emailSignIn" type="text" placeholder="Email" required>
+                            <input class="input-email" id="emailSignIn" type="text" placeholder="Email" name="email" required>
                             <div class="warning hidden"><p class="warning-text">Email not found. Please check the spelling</p></div>
                         </div>
                         <div class="password">
-                            <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" required>
+                            <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" name="password" required>
                             <a href="#" class="password-control"></a>
                             <div class="warning"><p class="warning-text">Password contain unsupported characters</p></div>
                         </div>
