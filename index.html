@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/sourse/scss/normalize.css">
+    <link rel="stylesheet" href="./sourse/scss/style.css">
+    <script defer src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <div class="form form-signUp hidden">
+                <div class="form-title title-signUp">
+                    <p>Sign Up</p>
+                </div>
+
+                <div class="form-body">
+
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
+                        <div>
+                            <input class="input-name" id="id" type="text" placeholder="First Name" required>
+                        </div>
+                        <div>
+                            <input class="input-name" id="surname" type="text" placeholder="Last Name">
+                        </div>
+                        <div>
+                            <input class="input-email" id="email" type="text" placeholder="Email" required>
+                        </div>
+                        <div class="password">
+                            <input class="input-password" id="password" type="password" placeholder="Password" required>
+                            <a href="#" class="password-control"></a>
+                            <div class="warning hidden"><p class="warning-text">Password contain unsupported characters</p></div>
+                        </div>
+                        <div class="password">
+                            <input class="input-confirmPassword" id="passwordControl" type="password" placeholder="Confirm Password" required>
+                            <a href="#" class="password-control"></a>
+                        </div>
+                       
+                        <input class="input-submit" type="submit" value="Sign Up">
+                    </form>
+                </div> 
+                <div class="footer footer-signUp">
+                    <span>Already have an account?</span>
+                    <a href="./signIn.html" id="SignIn">Sign in</a>
+                </div>
+                
+            </div>
+
+            <div class="form form-signIn hidden">
+                <div class="form-title title-signIn">
+                    <p>Sign In</p>
+                </div>
+
+                <div class="form-body">
+
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
+                        <div>
+                            <input class="input-email" id="emailSignIn" type="text" placeholder="Email" required>
+                            <div class="warning hidden"><p class="warning-text">Email not found. Please check the spelling</p></div>
+                        </div>
+                        <div class="password">
+                            <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" required>
+                            <a href="#" class="password-control"></a>
+                            <div class="warning"><p class="warning-text">Password contain unsupported characters</p></div>
+                        </div>
+                       
+                        <input class="input-submit" type="submit" value="Sign Up">
+                        <a class="link-forgotPassword" href="#" id="ForgotPassword">Forgot password?</a>
+                    </form>
+                </div>
+
+                <div class="footer footer_signIn">
+                    <span>Don't have an account?</span>
+                    <a href="#" id="SignUp">Sign up</a>
+                </div>
+                
+            </div>
+
+            <div class="form form-restorePassword">
+                <div class="form-title title-restorePassword">
+                    <img src="./sourse/images/angle-left-b.png" alt="arrow-left">
+                    <p class="title-text">Restore Password</p>
+                </div>
+
+                <div class="form-text text-restorePassword">
+                    <p>Please use your email address, and we’ll send you the link to reset your password</p>
+                </div>
+
+                <div class="form-body body_restorePassword">
+
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
+                        <div>
+                            <input class="input-email" id="emailrestorePassword" type="text" placeholder="Email">
+                        </div>
+                       
+                        <input class="input-submit submit-restorePassword" id="submit-restorePassword" type="submit" value="Send Reset Link">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="form form-restorePassword hidden">
+                <div class="form-title title-restorePassword">
+                    <img src="./sourse/images/angle-left-b.png" alt="arrow-left">
+                    <p class="title-text">Restore Password</p>
+                </div>
+
+                <div class="form-text text-restorePassword">
+                    <p>An email has been sent to example@exam.com. Check your inbox, and click the reset link provided.</p>
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>
