@@ -50,6 +50,7 @@ input:focus {
   background-color: #FFFFFF;
 }
 
+.email,
 .password {
   position: relative;
 }
@@ -277,8 +278,11 @@ form {
   }
   .warning {
     position: absolute;
-    top: 32px;
+    top: 35px;
     font-size: 13px;
+  }
+  .password {
+    margin: 22px 0;
   }
   .input-password,
   .input-confirmPassword {

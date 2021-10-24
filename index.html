@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-            <div class="form form-signUp">
+            <div class="form form-signUp hidden">
                 <div class="form-title title-signUp">
                     <p>Sign Up</p>
                 </div>
@@ -51,7 +51,7 @@
                 
             </div>
 
-            <div class="form form-signIn hidden">
+            <div class="form form-signIn">
                 <div class="form-title title-signIn">
                     <p>Sign In</p>
                 </div>
@@ -59,9 +59,9 @@
                 <div class="form-body">
 
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
-                        <div>
+                        <div class="email">
                             <input class="input-email" id="emailSignIn" type="text" placeholder="Email" name="email" required>
-                            <div class="warning hidden"><p class="warning-text">Email not found. Please check the spelling</p></div>
+                            <div class="warning"><p class="warning-text">Email not found. Please check the spelling</p></div>
                         </div>
                         <div class="password">
                             <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" name="password" required>
