@@ -14,18 +14,12 @@ input {
     }
 }
 
-
-
-
 .input-email {
     background: url(../images/Vector.png) no-repeat center left 20px;
     padding-left: 63px;
     background-color: #FFFFFF;
 }
-.email,
-.password {
-	position: relative;
-}
+
 
 .input-password {
     background: url(../images/lock.png) no-repeat center left 20px;
@@ -63,4 +57,7 @@ input {
     color: #FFFFFF;
     cursor: pointer;
 }
-
+.email,
+.password {
+	position: relative;
+}

@@ -50,11 +50,6 @@ input:focus {
   background-color: #FFFFFF;
 }
 
-.email,
-.password {
-  position: relative;
-}
-
 .input-password {
   background: url(../images/lock.png) no-repeat center left 20px;
   padding-left: 63px;
@@ -92,6 +87,11 @@ input:focus {
   padding-right: 32px;
   color: #FFFFFF;
   cursor: pointer;
+}
+
+.email,
+.password {
+  position: relative;
 }
 
 .warning {
@@ -282,7 +282,7 @@ form {
     font-size: 13px;
   }
   .password {
-    margin: 22px 0;
+    margin: 0 0 22px 0;
   }
   .input-password,
   .input-confirmPassword {
