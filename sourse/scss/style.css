@@ -222,7 +222,7 @@ form {
   margin: 20px 0;
 }
 
-#SignIn, #SignUp {
+.link-signIn, .link-signUp {
   margin-left: 20px;
 }
 
@@ -314,6 +314,9 @@ form {
   }
   .footer a {
     margin: 0;
+  }
+  .link-signIn, .link-signUp {
+    margin-left: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
