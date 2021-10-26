@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/sourse/scss/normalize.css">
     <link rel="stylesheet" href="./sourse/scss/style.css">
     <script defer src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script defer src="./index.js"></script>
     <title>ITRex-Lab. Homework 1</title>
 </head>
 <body>
     <div class="container">
-            <div class="form form-signUp">
+            <div class="form form-signUp hidden">
                 <div class="form-title title-signUp">
                     <p>Sign Up</p>
                 </div>
@@ -41,7 +42,7 @@
                             <a href="#" class="password-control"></a>
                         </div>
                        
-                        <input class="input-submit" type="submit" value="Sign Up">
+                        <button class="input-submit submit__signUp" type="submit" value="Sign Up">Sign Up</button>
                     </form>
                 </div> 
                 <div class="footer footer-signUp">
@@ -51,7 +52,7 @@
                 
             </div>
 
-            <div class="form form-signIn hidden">
+            <div class="form form-signIn">
                 <div class="form-title title-signIn">
                     <p>Sign In</p>
                 </div>
@@ -69,7 +70,7 @@
                             <div class="warning hidden"><p class="warning-text">Password contain unsupported characters</p></div>
                         </div>
                        
-                        <input class="input-submit" type="submit" value="Sign Up">
+                        <button class="input-submit submit__signIn" type="submit" value="Sign In">Sign In</button>
                         <a class="link-forgotPassword" href="#" id="ForgotPassword">Forgot password?</a>
                     </form>
                 </div>
@@ -98,7 +99,7 @@
                             <input class="input-email" id="emailrestorePassword" type="text" placeholder="Email">
                         </div>
                        
-                        <input class="input-submit submit-restorePassword" id="submit-restorePassword" type="submit" value="Send Reset Link">
+                        <button class="input-submit submit-restorePassword" id="submit-restorePassword" type="submit" value="Send Reset Link">Send Reset Link</button>
                     </form>
                 </div>
 

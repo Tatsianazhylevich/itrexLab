@@ -81,7 +81,7 @@ input:focus {
 .input-submit {
   width: 146px;
   height: 56px;
-  margin-top: 44px;
+  margin: 44px 0 32px;
   border-radius: 8px;
   background: url(../images/angle-right-b.png) no-repeat center right 20px, #7297FF;
   padding-right: 32px;
@@ -232,6 +232,8 @@ form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background: url(../images/bg-mobile.jpg) no-repeat;
+    background-size: contain;
   }
   .form {
     -webkit-box-pack: start;
@@ -280,9 +282,6 @@ form {
     position: absolute;
     top: 35px;
     font-size: 13px;
-  }
-  .password {
-    margin: 0 0 22px 0;
   }
   .input-password,
   .input-confirmPassword {

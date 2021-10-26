@@ -1,6 +1,8 @@
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
+        background: url(../images/bg-mobile.jpg) no-repeat;
+        background-size: contain; 
     }
     .form {
         justify-content: flex-start;
@@ -47,9 +49,6 @@
         top: 35px;
         font-size: 13px;
     }
-    .password {
-        margin: 0 0 22px 0;
-    }
     .input-password,
     .input-confirmPassword
     {
@@ -81,3 +80,9 @@
         margin-left: 0px;
     }
 }
+
+// @media (max-width: 320px) {
+//     .container {
+//         background: url(../images/bg-mobile.jpg) no-repeat;
+//     }
+// }
