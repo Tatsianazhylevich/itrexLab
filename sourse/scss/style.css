@@ -83,7 +83,7 @@ input:focus {
   height: 56px;
   margin: 44px 0 32px;
   border-radius: 8px;
-  background: url(/sourse/images/angle-left-b.png) no-repeat center right 20px, #7297FF;
+  background: url(/sourse/images/angle-right-b.png) no-repeat center right 20px, #7297FF;
   padding-right: 32px;
   color: #FFFFFF;
   cursor: pointer;
@@ -92,6 +92,11 @@ input:focus {
 .email,
 .password {
   position: relative;
+}
+
+.arrowLeft {
+  width: 25px;
+  background: url(/sourse/images/angle-left-b.png) no-repeat;
 }
 
 .warning {

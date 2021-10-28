@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../sourse/scss/normalize.css">
-    <link rel="stylesheet" href="../sourse/scss/style.css">
-    <script defer src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script defer src="./index.js"></script>
-    <title>ITRex-Lab. Homework 1</title>
-</head>
-<body>
-    <div class="container">
+let signInPage = {
+    render: () => {
+        return `
+        <div class="container">
             <div class="form form-signIn">
                 <div class="form-title title-signIn">
                     <p>Sign In</p>
                 </div>
-
+        
                 <div class="form-body">
-
+        
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
                         <div class="email">
                             <input class="input-email" id="emailSignIn" type="text" placeholder="Email" name="email" required>
@@ -32,18 +19,21 @@
                             <a href="#" class="password-control"></a>
                             <div class="warning hidden"><p class="warning-text">Password contain unsupported characters</p></div>
                         </div>
-                       
+                    
                         <button class="input-submit submit__signIn" type="submit" value="Sign In">Sign In</button>
-                        <a class="link-forgotPassword" href="./restorePassword.html" id="ForgotPassword">Forgot password?</a>
+                        <a class="link-forgotPassword" href="#" id="ForgotPassword" data-name="/restore-password">Forgot password?</a>
                     </form>
                 </div>
-
+        
                 <div class="footer footer_signIn">
                     <span>Don't have an account?</span>
-                    <a href="./signUp.html" class="link-signUp">Sign up</a>
+                    <a href="#" class="link-signUp" data-name="/">Sign up</a>
                 </div>
                 
             </div>
-    </div>
-</body>
-</html>
+        </div>
+        `
+    }
+};
+
+export default signInPage;
