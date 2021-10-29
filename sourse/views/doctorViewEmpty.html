@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/sourse/scss/normalize.css">
+    <link rel="stylesheet" href="./sourse/scss/style.css">
+    <script defer src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script defer src="./index.js"></script>
+    <title>ITRex-Lab. Homework 1</title>
+</head>
+<body>
+    <div id="root">
+        <div class="wraper">
+            <header class="header">
+                <div class="header-logo">
+                    <img class="logo-img" src="./sourse/images/logo.png" alt="logo">
+                    <h2 class="logo-text">palm clinic</h2>
+                </div>
+                <div class="header_user">
+                    <div class="header_user-info">
+                        <p class="header_user-name">Miranda Nelson</p>
+                        <p class="header_user-profession">Doctor</p>
+                    </div>
+                    <div class="header_user-foto">
+                        <div class="header_user-status"></div>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <nav class="menu">
+                    <ul class="menu_container">
+                        <li class="menu_item activeMenuItem"><a class="item-link" href="#">Patients</a></li>
+                        <li class="menu_item"><a  class="item-link" href="#">Resolutions</a></li>
+                    </ul>
+                </nav>
+                <section class="board">
+                    <div class="board_header">
+                        <h2 class="board_title">My Patients</h2>
+                    </div>
+                    <div class="board_empty">
+                        <div class="board_empty-image">
+                            <img src="./sourse/images/medical-history.png" alt="medical_card">
+                        </div>
+                        <div class="board_empty-text">
+                            <p class="empty-text">You have no patients yet. <br> To create a patient profile, please contact your administrator.</p>
+                        </div> 
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="module" src="./sourse/js/view/route.js"></script> -->
+</body>
+</html>
