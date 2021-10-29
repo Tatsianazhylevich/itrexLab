@@ -30,7 +30,10 @@ const router = () => {
             isMatch: location.pathname === route.path
         }
     })
-    const match = findMatches.find(potentialMatch => potentialMatch.isMatch);;
+    const match = findMatches.find(potentialMatch => potentialMatch.isMatch);
+    // if (!match) {
+    //     return {roote: { path: '/error404', component: errorPage}, isMatch: true}
+    // };
     console.log(match);
     const matchComponent = match.route;
     const component = matchComponent.component;

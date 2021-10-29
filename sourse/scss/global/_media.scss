@@ -81,8 +81,52 @@
     }
 }
 
-// @media (max-width: 320px) {
-//     .container {
-//         background: url(../images/bg-mobile.jpg) no-repeat;
-//     }
-// }
+// ========MEDIA FOR DOCTOR VIEW===========
+
+@media (max-width: 565px) {
+   .wraper {
+        padding: 0;
+   }
+
+   .header {
+        margin: 0 24px;
+        padding: 16px 0;  
+   }
+
+   .header_user-info {
+        display: none;
+   }
+
+   .main {
+        padding: 40px 24px;
+   }
+
+   .menu_container {
+        display: flex;
+   }
+   .menu_item {
+        width: 120px;
+        margin: 0px;
+   }
+
+   .menu_item:first-child {
+       margin-right: 24px;
+   }
+
+   .item-link {
+        line-height: 130%;
+   }
+
+   .board {
+        margin-top: 45px;
+    }
+
+   .board_title {
+        font-size: 20px;
+   }
+
+   .board_empty {
+        margin-top: 73px;
+   }
+   
+}

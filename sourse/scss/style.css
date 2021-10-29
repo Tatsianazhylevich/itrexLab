@@ -133,6 +133,211 @@ input:focus {
   margin-top: 24vh;
 }
 
+.wraper {
+  position: relative;
+  max-width: 1920px;
+  height: 1024px;
+  padding: 0 64px;
+  background: #E4EBFF;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo .logo-img {
+  width: 29px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.header-logo .logo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.header_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 16px;
+}
+
+.header_user-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #202225;
+}
+
+.header_user-profession {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 130%;
+  color: #A1ABC9;
+}
+
+.header_user-foto {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(/sourse/images/doctors/mirandaNelson.png) no-repeat;
+}
+
+.header_user-status {
+  position: absolute;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background: #34C197;
+  border: 3px solid #E3EBFF;
+  border-radius: 50%;
+}
+
+.main {
+  max-width: 1792px;
+  height: 896px;
+  padding: 40px 48px;
+  background-color: #F9FAFF;
+  -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+          box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+  border-radius: 16px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 8px;
+  -webkit-filter: drop-shadow(0px 4px 32px rgba(218, 228, 255, 0.24));
+          filter: drop-shadow(0px 4px 32px rgba(218, 228, 255, 0.24));
+  background: #FFFFFF;
+}
+
+.menu_item .item-link {
+  color: #7297FF;
+}
+
+.item-link {
+  text-align: center;
+  text-decoration: none;
+  line-height: 140%;
+  font-size: 15px;
+}
+
+.activeMenuItem {
+  background: #7297FF;
+}
+
+.activeMenuItem .item-link {
+  color: #FFFFFF;
+}
+
+.board {
+  margin-top: 56px;
+}
+
+.board_title {
+  color: #202225;
+  font-size: 24px;
+}
+
+.board_empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 260px;
+}
+
+.board_empty-text {
+  margin-top: 35px;
+}
+
+.empty-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 140%;
+  color: #A1ABC9;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -321,6 +526,46 @@ form {
   }
   .link-signIn, .link-signUp {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 565px) {
+  .wraper {
+    padding: 0;
+  }
+  .header {
+    margin: 0 24px;
+    padding: 16px 0;
+  }
+  .header_user-info {
+    display: none;
+  }
+  .main {
+    padding: 40px 24px;
+  }
+  .menu_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu_item {
+    width: 120px;
+    margin: 0px;
+  }
+  .menu_item:first-child {
+    margin-right: 24px;
+  }
+  .item-link {
+    line-height: 130%;
+  }
+  .board {
+    margin-top: 45px;
+  }
+  .board_title {
+    font-size: 20px;
+  }
+  .board_empty {
+    margin-top: 73px;
   }
 }
 /*# sourceMappingURL=style.css.map */
