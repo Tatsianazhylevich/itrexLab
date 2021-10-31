@@ -9,32 +9,36 @@ const signUpPage = {
     
                 <div class="form-body">
     
-                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" >
+                    <form action="#">
                         <div>
                             <input class="input-name" id="id" type="text" placeholder="First Name" name="firstName" required>
+                            <p class="warning-text_name">Name contain unsupported characters</p>
                         </div>
                         <div>
                             <input class="input-name" id="surname" type="text" placeholder="Last Name" name="lastName" >
+                            <p class="warning-text_surname">Surame contain unsupported characters</p>
                         </div>
                         <div>
                             <input class="input-email" id="email" type="text" placeholder="Email" name="email" required>
+                            <p class="warning-text_email">Email contain unsupported characters</p>
                         </div>
                         <div class="password">
                             <input class="input-password" id="password" type="password" placeholder="Password" name="password" required>
                             <a href="#" class="password-control"></a>
-                            <div class="warning hidden"><p class="warning-text">Password contain unsupported characters</p></div>
+                            <p class="warning-text_pass">Password contain unsupported characters</p>
                         </div>
                         <div class="password">
                             <input class="input-confirmPassword" id="passwordControl" type="password" placeholder="Confirm Password" required>
                             <a href="#" class="password-control"></a>
+                            <p class="warning-text_confirm">Password confirmation does not match</p>
                         </div>
                     
-                        <button class="input-submit submit__signUp" type="submit" value="Sign Up">Sign Up</button>
+                        <button class="input-submit submit__signUp" type="submit" value="Sign Up" data-name="/patient-board">Sign Up</button>
                     </form>
                 </div> 
                 <div class="footer footer-signUp">
                     <span>Already have an account?</span>
-                    <a href="#" class="link-signIn" data-name="/sign-in">Sign in</a>
+                    <a href="/sign-in" class="link-signIn" data-name="/sign-in">Sign in</a>
                 </div>
                 
             </div>

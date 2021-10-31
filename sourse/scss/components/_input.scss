@@ -46,6 +46,15 @@ input {
     background: url(/sourse/images/eye-slash.png) no-repeat center;
 
 }
+.view {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 39px;
+    right: 25px;
+    background: url(/sourse/images/eye.svg) no-repeat center;
+}
 
 .input-submit {
     width: 146px;

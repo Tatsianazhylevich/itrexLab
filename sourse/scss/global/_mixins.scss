@@ -1,7 +1,6 @@
 @mixin bodyBackground {
     max-width: 1792px;
     height: 896px;
-    padding: 40px 48px;
     background-color: $greylight;
     box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
     border-radius: 16px;
@@ -66,10 +65,53 @@
     text-align: center;
 }
 
-@mixin onlain {
+@mixin onine {
     width: 12px;
     height: 12px;
     background: $green;
     border: 3px solid #E3EBFF;
     border-radius: 50%;
+}
+
+@mixin card {
+    padding: 24px 32px 40px;
+    background: $white;
+    box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+    border-radius: 12px;
+}
+
+@mixin patientName {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    color: $black;
+}
+
+@mixin statusText {
+    margin-left: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 130%;
+    color: $mediumgrey;
+}
+
+@mixin dateText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: $black;
+}
+@mixin noteText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: $black;
 }

@@ -1,7 +1,7 @@
 @import '../global/variables';
 @import '../global/mixins';
 
-.wraper {
+.wrapper {
     position: relative;
     max-width: 1920px;
     height: 1024px;
@@ -64,12 +64,13 @@
 .header_user-status {
     position: absolute;
     right: 0px;
-    @include onlain;
+    @include online;
 }
 
 // ===================================MAIN======================================
 
 .main {
+    padding: 40px 0 40px 48px;
     @include bodyBackground;
 }
 
@@ -110,7 +111,8 @@
 
 // ==================BOARD===============
 
-.board {
+.board_empty,
+.board_card {
     margin-top: 56px;
 }
 
@@ -119,7 +121,9 @@
     font-size: 24px;
 }
 
-.board_empty {
+// =================EMPTY BOARD==========
+
+.board_empty-main {
     display: flex;
     justify-content: center;
     align-items: center;

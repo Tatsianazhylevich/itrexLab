@@ -2,8 +2,11 @@ import signUpPage from "./signUp.js";
 import signInPage from './signIn.js';
 import restorePasswordPage from './restorePassword.js';
 import restoredPasswordPage from './restoredPassword.js';
+import doctorViewEmpty from "./doctorViewEmpty.js";
 import errorPage from './errorPage.js';
 import handleChange from "../handleChange.js";
+
+import {passwordControl} from '../passwordControl/passwordControl.js'
 
 const root = document.getElementById("root");
 
@@ -12,6 +15,7 @@ const routes = [
     { path: '/sign-in', component: signInPage},
     { path: '/restore-password', component: restorePasswordPage},
     { path: '/restored-password', component: restoredPasswordPage},
+    { path: '/patient-board', component: doctorViewEmpty},
     { path: '/error404', component: errorPage},
 ]
 
@@ -22,7 +26,6 @@ const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
 const router = () => {
 
     const path = parseLocation();
-    console.log(path);
 
     const findMatches = routes.map(route => {
         return {
@@ -31,16 +34,18 @@ const router = () => {
         }
     })
     const match = findMatches.find(potentialMatch => potentialMatch.isMatch);
-    // if (!match) {
-    //     return {roote: { path: '/error404', component: errorPage}, isMatch: true}
-    // };
-    console.log(match);
+ 
     const matchComponent = match.route;
     const component = matchComponent.component;
-    console.log(component);
+   
     root.innerHTML = component.render();
+
+
     const container = document.querySelector('.container');
+    const form = document.querySelector('form');
     container.addEventListener('click', handleChange);
+    form.addEventListener('click', passwordControl);
+    
 }
 
 window.addEventListener('hashchange', router);

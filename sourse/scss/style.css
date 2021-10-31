@@ -78,6 +78,16 @@ input:focus {
   background: url(/sourse/images/eye-slash.png) no-repeat center;
 }
 
+.view {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 39px;
+  right: 25px;
+  background: url(/sourse/images/eye.svg) no-repeat center;
+}
+
 .input-submit {
   width: 146px;
   height: 56px;
@@ -99,20 +109,30 @@ input:focus {
   background: url(/sourse/images/angle-left-b.png) no-repeat;
 }
 
-.warning {
+.warning-text_name,
+.warning-text_surname,
+.warning-text_email,
+.warning-text_pass,
+.warning-text_confirm,
+.warningSignIn-text_email,
+.warningSignIn-text_pass,
+.warningRestore-text_email {
+  display: none;
   position: absolute;
-  top: 65px;
-}
-
-.warning-text {
-  margin: 20px 0;
+  bottom: 5px;
   font-size: 13px;
   letter-spacing: -0.24px;
   color: #F6657F;
 }
 
 .warningInput {
+  position: relative;
   border: 1px solid #F6657F;
+}
+
+.active {
+  position: relative;
+  display: block;
 }
 
 .footer {
@@ -133,7 +153,7 @@ input:focus {
   margin-top: 24vh;
 }
 
-.wraper {
+.wrapper {
   position: relative;
   max-width: 1920px;
   height: 1024px;
@@ -236,9 +256,9 @@ input:focus {
 }
 
 .main {
+  padding: 40px 0 40px 48px;
   max-width: 1792px;
   height: 896px;
-  padding: 40px 48px;
   background-color: #F9FAFF;
   -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
           box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
@@ -298,7 +318,8 @@ input:focus {
   color: #FFFFFF;
 }
 
-.board {
+.board_empty,
+.board_card {
   margin-top: 56px;
 }
 
@@ -307,7 +328,7 @@ input:focus {
   font-size: 24px;
 }
 
-.board_empty {
+.board_empty-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,6 +357,161 @@ input:focus {
   line-height: 140%;
   color: #A1ABC9;
   text-align: center;
+}
+
+.board_card-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 32px;
+  max-height: 680px;
+  list-style-type: none;
+  overflow-y: auto;
+}
+
+.card-item {
+  margin-right: 20px;
+  margin-bottom: 24px;
+  width: 406px;
+  height: 264px;
+  padding: 24px 32px 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+          box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+  border-radius: 12px;
+}
+
+.card_header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+}
+
+.card_header::before {
+  position: absolute;
+  top: 75px;
+  right: -32px;
+  content: '';
+  background-color: #DCE0EC;
+  width: 406px;
+  height: 1px;
+}
+
+.card_header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card_header-foto {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: url(/sourse/images/patients/jane_cooper.png) no-repeat;
+}
+
+.card_header-about {
+  margin: 11px 17px;
+}
+
+.card_header-name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: #202225;
+  margin-bottom: 5px;
+}
+
+.card_header-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.status {
+  width: 12px;
+  height: 12px;
+  background: #34C197;
+  border: 3px solid #E3EBFF;
+  border-radius: 50%;
+}
+
+.status-text {
+  margin-left: 5px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 130%;
+  color: #A1ABC9;
+}
+
+.card_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 55px 0px 40px;
+}
+
+.card_main-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card_main-note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.date-icon {
+  width: 24px;
+  height: 24px;
+  background: url(/sourse/images/icons/clock-three.png) no-repeat center;
+}
+
+.note-icon {
+  width: 69px;
+  height: 24px;
+  background: url(/sourse/images/icons/clipboard-blank.png) no-repeat center;
+}
+
+.date-text {
+  margin-left: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 130%;
+  color: #202225;
+}
+
+.note-text {
+  margin-left: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 140%;
+  color: #202225;
 }
 
 * {
@@ -530,7 +706,7 @@ form {
 }
 
 @media (max-width: 565px) {
-  .wraper {
+  .wrapper {
     padding: 0;
   }
   .header {
