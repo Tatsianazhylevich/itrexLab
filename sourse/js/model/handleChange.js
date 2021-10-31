@@ -1,7 +1,7 @@
-import router from './view/route.js';
-import { validationSignUpForm } from './validation/validationSignUpForm.js';
-import { validationSignInForm } from './validation/validationSignInForm.js';
-import { validationRestorePassword } from './validation/validationRestorePassword.js';
+import router from '../route.js';
+import { validationSignUpForm } from '../controller/validation/validationSignUpForm.js';
+import { validationSignInForm } from '../controller/validation/validationSignInForm.js';
+import { validationRestorePassword } from '../controller/validation/validationRestorePassword.js';
 
 
 const handleChange = (event) => {

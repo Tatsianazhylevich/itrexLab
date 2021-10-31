@@ -1,3 +1,5 @@
+import { User } from "../../model/localStorage.js";
+
 const validName = (name) => {
     return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(name);
 }
@@ -39,26 +41,20 @@ export function validationSignUpForm () {
         }
         
     }
-    let user = {
-        userName: userName.value,
-        surName: surName.value,
-        email: signUpEmail.value,
-        password: passwordSignUp.value,
-        passwordEqual: isPasswordEqual(passwordSignUp.value)
-    }
-
-    if(!isValid(validName(user.userName), userName, warningTextName) &&
-    !isValid(validSurname(user.surName), surName, warningTextSurName) &&
-    !isValid(validEmail(user.email), signUpEmail, warningTextEmail) &&
-    !isValid(validPassword(user.password), passwordSignUp, warningTextPass) &&
-    !isValid(isPasswordEqual(user.passwordEqual), confirmPassword, warningTextConfirm)) {
+    let newUser = new User(userName.value, surName.value, email.value, password.value)
+    
+    if(!isValid(validName(newUser.userName), userName, warningTextName) &&
+    !isValid(validSurname(newUser.surName), surName, warningTextSurName) &&
+    !isValid(validEmail(newUser.email), signUpEmail, warningTextEmail) &&
+    !isValid(validPassword(newUser.password), passwordSignUp, warningTextPass) &&
+    !isValid(isPasswordEqual(newUser.password), confirmPassword, warningTextConfirm)) {
         return false;
     }
 
     let usersMails = Object.keys(localStorage);
 
     for (let mail of usersMails) {
-        if ( mail === user.email) {
+        if ( mail === newUser.email) {
             signUpEmail.classList.add('warningInput');
             warningTextEmail.classList.add('active');
             warningTextEmail.innerHTML = 'User with such mail is already registered';
@@ -68,8 +64,9 @@ export function validationSignUpForm () {
             warningTextEmail.classList.remove('active');
         }
     }
-   
-    localStorage.setItem(user.email, JSON.stringify(user));
+
+    console.log(newUser);
+    newUser.setUserToLS();
     
 
     return true

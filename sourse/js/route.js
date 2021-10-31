@@ -1,23 +1,9 @@
-import signUpPage from "./signUp.js";
-import signInPage from './signIn.js';
-import restorePasswordPage from './restorePassword.js';
-import restoredPasswordPage from './restoredPassword.js';
-import doctorViewEmpty from "./doctorViewEmpty.js";
-import errorPage from './errorPage.js';
-import handleChange from "../handleChange.js";
+import { routes } from "./view/routes.js";
+import handleChange from "./model/handleChange.js";
 
-import {passwordControl} from '../passwordControl/passwordControl.js'
+import {passwordControl} from './controller/passwordControl/passwordControl.js'
 
 const root = document.getElementById("root");
-
-const routes = [
-    { path: '/', component: signUpPage },
-    { path: '/sign-in', component: signInPage},
-    { path: '/restore-password', component: restorePasswordPage},
-    { path: '/restored-password', component: restoredPasswordPage},
-    { path: '/patient-board', component: doctorViewEmpty},
-    { path: '/error404', component: errorPage},
-]
 
 console.log(location)
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';

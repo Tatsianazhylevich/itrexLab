@@ -17,7 +17,7 @@ export function validationSignInForm () {
         } else {
             signInEmail.classList.remove('warningInput');
             warningTextEmail.classList.remove('active');
-
+            
             let userFromLS = JSON.parse(localStorage.getItem(user));
 
             if (userFromLS.password !== passwordSignIn.value) {
