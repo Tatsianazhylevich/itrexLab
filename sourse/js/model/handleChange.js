@@ -1,4 +1,4 @@
-import router from '../route.js';
+import router from '../index.js';
 import { validationSignUpForm } from '../controller/validation/validationSignUpForm.js';
 import { validationSignInForm } from '../controller/validation/validationSignInForm.js';
 import { validationRestorePassword } from '../controller/validation/validationRestorePassword.js';
