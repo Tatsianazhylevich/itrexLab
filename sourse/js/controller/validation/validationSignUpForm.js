@@ -1,19 +1,5 @@
 import { User } from "../../model/localStorage.js";
 
-const validName = (name) => {
-    return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(name);
-}
-const validSurname = (surname) => {
-    return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(surname);
-}
-const validEmail = (mail) => {
-    return /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm.test(mail);
-}
-const validPassword = (pass) => {
-    return /^(?=.*[A-Z])(?=.*[0-9].)(?=.*[a-z].*[a-z].*[a-z]).{5,}$/.test(pass)
-}
-
-
 export function validationSignUpForm () {
     const userName = document.getElementById('id');
     const surName = document.getElementById('surname');
@@ -26,6 +12,20 @@ export function validationSignUpForm () {
     const warningTextEmail = document.querySelector('.warning-text_email');
     const warningTextPass = document.querySelector('.warning-text_pass');
     const warningTextConfirm = document.querySelector('.warning-text_confirm');
+
+
+    const validName = (name) => {
+        return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(name);
+    }
+    const validSurname = (surname) => {
+        return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(surname);
+    }
+    const validEmail = (mail) => {
+        return /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm.test(mail);
+    }
+    const validPassword = (pass) => {
+        return /^(?=.*[A-Z])(?=.*[0-9].)(?=.*[a-z].*[a-z].*[a-z]).{5,}$/.test(pass)
+    }
   
     const isPasswordEqual = (password) => (password === confirmPassword.value) ? true : false;
 
@@ -37,38 +37,21 @@ export function validationSignUpForm () {
         } else {
             input.classList.remove('warningInput');
             error.classList.remove('active');
-            return true;
+            
         }
-        
+        return true;
     }
-    let newUser = new User(userName.value, surName.value, email.value, password.value)
-    
-    if(!isValid(validName(newUser.userName), userName, warningTextName) &&
-    !isValid(validSurname(newUser.surName), surName, warningTextSurName) &&
-    !isValid(validEmail(newUser.email), signUpEmail, warningTextEmail) &&
-    !isValid(validPassword(newUser.password), passwordSignUp, warningTextPass) &&
-    !isValid(isPasswordEqual(newUser.password), confirmPassword, warningTextConfirm)) {
-        return false;
-    }
+    let newUser = new User(userName.value, surName.value, signUpEmail.value, passwordSignUp.value, isPasswordEqual(passwordSignUp.value))
 
-    let usersMails = Object.keys(localStorage);
+    let isValidSignUp = isValid(validName(userName.value), userName, warningTextName) &&
+    isValid(validSurname(surName.value), surName, warningTextSurName) &&
+    isValid(validEmail(signUpEmail.value), signUpEmail, warningTextEmail) &&
+    isValid(validPassword(passwordSignUp.value), passwordSignUp, warningTextPass) &&
+    isValid(isPasswordEqual(passwordSignUp.value), confirmPassword, warningTextConfirm);
 
-    for (let mail of usersMails) {
-        if ( mail === newUser.email) {
-            signUpEmail.classList.add('warningInput');
-            warningTextEmail.classList.add('active');
-            warningTextEmail.innerHTML = 'User with such mail is already registered';
-            return false;
-        } else {
-            signUpEmail.classList.remove('warningInput');
-            warningTextEmail.classList.remove('active');
-        }
-    }
 
-    console.log(newUser);
     newUser.setUserToLS();
     
-
-    return true
+    return isValidSignUp;
 }  
 

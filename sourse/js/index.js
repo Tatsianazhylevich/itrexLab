@@ -1,12 +1,10 @@
 import { routes } from "./view/routes.js";
 import handleChange from "./model/handleChange.js";
-
 import {passwordControl} from './controller/passwordControl/passwordControl.js'
-
 const root = document.getElementById("root");
 
-console.log(location)
-const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
+
+// const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
 
 
 const router = () => {
@@ -28,9 +26,9 @@ const router = () => {
 
 
     const container = document.querySelector('.container');
-    const form = document.querySelector('form');
     container.addEventListener('click', handleChange);
-    form.addEventListener('click', passwordControl);
+    const eyes = document.querySelectorAll('.password-control');
+    eyes.forEach((eye) => eye.addEventListener('click', passwordControl));
     
 }
 

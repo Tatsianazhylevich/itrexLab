@@ -11,7 +11,7 @@ const handleChange = (event) => {
         router();
     }
 
-    const submitSignUp = (e) => {
+    const submitSignUp = (event) => {
         event.preventDefault();
         if(validationSignUpForm()) {
             submit(event);
@@ -22,7 +22,7 @@ const handleChange = (event) => {
         submitSignUp(event);
     }
 
-    const submitSignIn = (e) => {
+    const submitSignIn = (event) => {
         event.preventDefault();
         if(validationSignInForm()) {
             submit(event);
@@ -33,7 +33,7 @@ const handleChange = (event) => {
         submitSignIn(event);
     }
 
-    const submitRestore = (e) => {
+    const submitRestore = (event) => {
         event.preventDefault();
         if(validationRestorePassword()) {
             submit(event);

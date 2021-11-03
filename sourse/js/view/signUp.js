@@ -16,7 +16,7 @@ const signUpPage = {
                         </div>
                         <div>
                             <input class="input-name" id="surname" type="text" placeholder="Last Name" name="lastName" >
-                            <p class="warning-text_surname">Surame contain unsupported characters</p>
+                            <p class="warning-text_surname">Surname contain unsupported characters</p>
                         </div>
                         <div>
                             <input class="input-email" id="email" type="text" placeholder="Email" name="email" required>

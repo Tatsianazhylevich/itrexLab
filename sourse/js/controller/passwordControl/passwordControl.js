@@ -1,6 +1,5 @@
 export function passwordControl(e){
-	
-    console.log(e.target);
+
 	if (e.target.previousElementSibling.type === 'password') {
 		e.target.classList.add('view');
 		e.target.previousElementSibling.type = 'text';

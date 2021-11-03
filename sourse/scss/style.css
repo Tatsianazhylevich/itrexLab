@@ -378,10 +378,10 @@ input:focus {
 }
 
 .card-item {
-  margin-right: 20px;
-  margin-bottom: 24px;
   width: 406px;
   height: 264px;
+  margin-right: 20px;
+  margin-bottom: 24px;
   padding: 24px 32px 40px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
@@ -456,6 +456,12 @@ input:focus {
   font-size: 13px;
   line-height: 130%;
   color: #A1ABC9;
+}
+
+.card_header-more {
+  width: 24px;
+  height: 24px;
+  background: url(/sourse/images/icons/more-vertical.png) no-repeat center;
 }
 
 .card_main {
@@ -742,6 +748,18 @@ form {
   }
   .board_empty {
     margin-top: 73px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 24px;
+    min-width: 406px;
+    height: 264px;
   }
 }
 /*# sourceMappingURL=style.css.map */
