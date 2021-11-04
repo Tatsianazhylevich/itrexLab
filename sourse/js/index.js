@@ -1,16 +1,30 @@
-import { routes } from "./view/routes.js";
 import handleChange from "./model/handleChange.js";
-import {passwordControl} from './controller/passwordControl/passwordControl.js'
+import {passwordControl} from './controller/passwordControl/passwordControl.js';
+import patientController from "./controller/patientController.js";
+import { Model } from "./model/Model.js";
+import signUpPage from "./view/signUp.js";
+import signInPage from './view/signIn.js';
+import restorePasswordPage from './view/restorePassword.js';
+import restoredPasswordPage from './view/restoredPassword.js';
+import doctorViewEmpty from "./view/doctorViewEmpty.js";
+import errorPage from './view/errorPage.js';
+import DoctorViewCard from "./view/doctorViewCard.js";
+
 const root = document.getElementById("root");
+const patientsMVC = new patientController(new Model(),new DoctorViewCard())
 
-
-// const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
-
+export const routes = [
+    { path: '/', component: signUpPage },
+    { path: '/sign-in', component: signInPage},
+    { path: '/restore-password', component: restorePasswordPage},
+    { path: '/restored-password', component: restoredPasswordPage},
+    { path: '/empty-board', component: doctorViewEmpty},
+    { path: '/patient-board', component: patientsMVC},
+    { path: '/error404', component: errorPage},
+]
 
 const router = () => {
-
-    // const path = parseLocation();
-
+  
     const findMatches = routes.map(route => {
         return {
             route: route,
@@ -28,8 +42,7 @@ const router = () => {
     const container = document.querySelector('.container');
     container.addEventListener('click', handleChange);
     const eyes = document.querySelectorAll('.password-control');
-    eyes.forEach((eye) => eye.addEventListener('click', passwordControl));
-    
+    eyes.forEach((eye) => eye.addEventListener('click', passwordControl));  
 }
 
 window.addEventListener('hashchange', router);

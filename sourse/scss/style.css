@@ -417,7 +417,6 @@ input:focus {
   position: relative;
   width: 48px;
   height: 48px;
-  background: url(/sourse/images/patients/jane_cooper.png) no-repeat;
 }
 
 .card_header-about {
@@ -752,10 +751,22 @@ form {
 }
 
 @media (max-width: 800px) {
+  .card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .card-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-right: 20px;
     margin-bottom: 24px;
     min-width: 406px;
