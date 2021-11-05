@@ -28,6 +28,8 @@
 .card_header {
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 48px;
 }
 .card_header::before {
@@ -74,9 +76,29 @@
 }
 
 .card_header-more {
-    width: 24px;
-    height: 24px;
-    background: url(/sourse/images/icons/more-vertical.png) no-repeat center;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
+}
+.card_header-more::before {
+    position: absolute;
+    content: '';
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
+}
+.card_header-more::after {
+    position: absolute;
+    content: '';
+    bottom: 7px;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
 }
 
 // ==============MAIN===========

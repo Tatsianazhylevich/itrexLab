@@ -394,6 +394,12 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 48px;
 }
 
@@ -458,9 +464,31 @@ input:focus {
 }
 
 .card_header-more {
-  width: 24px;
-  height: 24px;
-  background: url(/sourse/images/icons/more-vertical.png) no-repeat center;
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background: #DCE0EC;
+  border-radius: 50%;
+}
+
+.card_header-more::before {
+  position: absolute;
+  content: '';
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  background: #DCE0EC;
+  border-radius: 50%;
+}
+
+.card_header-more::after {
+  position: absolute;
+  content: '';
+  bottom: 7px;
+  width: 5px;
+  height: 5px;
+  background: #DCE0EC;
+  border-radius: 50%;
 }
 
 .card_main {
@@ -750,7 +778,7 @@ form {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .card-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -760,17 +788,11 @@ form {
             justify-content: center;
   }
   .card-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-right: 20px;
-    margin-bottom: 24px;
-    min-width: 406px;
-    height: 264px;
+    width: 100%;
+  }
+  .card_header::before {
+    right: 0px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
