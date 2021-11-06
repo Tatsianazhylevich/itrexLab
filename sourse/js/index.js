@@ -1,5 +1,5 @@
 import handleChange from "./model/handleChange.js";
-import {passwordControl} from './controller/passwordControl/passwordControl.js';
+// import {passwordControl} from './controller/passwordControl/passwordControl.js';
 import patientController from "./controller/patientController.js";
 import { Model } from "./model/Model.js";
 import signUpPage from "./view/signUp.js";
@@ -41,8 +41,8 @@ const router = () => {
 
     const container = document.querySelector('.container');
     container.addEventListener('click', handleChange);
-    const eyes = document.querySelectorAll('.password-control');
-    eyes.forEach((eye) => eye.addEventListener('click', passwordControl));  
+    // const eyes = document.querySelectorAll('.password-control');
+    // eyes.forEach((eye) => eye.addEventListener('click', passwordControl));  
 }
 
 window.addEventListener('hashchange', router);

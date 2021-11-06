@@ -24,12 +24,12 @@ const signUpPage = {
                         </div>
                         <div class="password">
                             <input class="input-password" id="password" type="password" placeholder="Password" name="password" required>
-                            <a href="#" class="password-control"></a>
+                            <button href="#" class="password-control"></button>
                             <p class="warning-text_pass">Password contain unsupported characters</p>
                         </div>
                         <div class="password">
                             <input class="input-confirmPassword" id="passwordControl" type="password" placeholder="Confirm Password" required>
-                            <a href="#" class="password-control"></a>
+                            <button href="#" class="password-control"></button>
                             <p class="warning-text_confirm">Password confirmation does not match</p>
                         </div>
                     

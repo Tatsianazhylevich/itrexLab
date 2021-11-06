@@ -16,7 +16,7 @@ let signInPage = {
                         </div>
                         <div class="password">
                             <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" name="password" required>
-                            <a href="#" class="password-control"></a>
+                            <button href="#" class="password-control"></button>
                             <p class="warningSignIn-text_pass">Password contain unsupported characters</p>
                         </div>
                     

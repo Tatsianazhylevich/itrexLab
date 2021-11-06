@@ -49,6 +49,21 @@ const handleChange = (event) => {
         submit(event);
     }
 
+    const passwordControl = (e) => {
+        event.preventDefault();
+        if (e.target.previousElementSibling.type === 'password') {
+            e.target.classList.add('view');
+            e.target.previousElementSibling.type = 'text';
+        } else {
+            e.target.classList.remove('view');
+            e.target.previousElementSibling.type = 'password';
+        }
+        return false;
+    }
+
+    if (event.target.classList.contains('password-control')) {
+        passwordControl(event);
+    }
 };
 
 export default handleChange;
