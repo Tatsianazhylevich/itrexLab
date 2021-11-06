@@ -15,16 +15,16 @@ export function validationSignUpForm () {
 
 
     const validName = (name) => {
-        return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(name);
+        return /^([А-Я]{1,}[а-яё]{2,}|[A-Z]{1,}[a-z]{2,})/.test(name);
     }
     const validSurname = (surname) => {
-        return /^([А-Я]{1}[а-яё]{2,}|[A-Z]{1}[a-z]{2,})/.test(surname);
+        return /^([А-Я]{1,}[а-яё]{2,}|[A-Z]{1,}[a-z]{2,})/.test(surname);
     }
     const validEmail = (mail) => {
         return /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm.test(mail);
     }
     const validPassword = (pass) => {
-        return /^(?=.*[A-Z])(?=.*[0-9].)(?=.*[a-z].*[a-z].*[a-z]).{5,}$/.test(pass)
+        return /^(?=.*[0-9].)(?=.*[a-z].*[a-z].*[a-z]).{4,}$/.test(pass)
     }
   
     const isPasswordEqual = (password) => (password === confirmPassword.value) ? true : false;

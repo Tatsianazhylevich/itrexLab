@@ -12,12 +12,12 @@ let signInPage = {
                     <form action="#" >
                         <div class="email">
                             <input class="input-email" id="emailSignIn" type="text" placeholder="Email" name="email" required>
-                            <p class="warningSignIn-text_email">Email not found. Please check the spelling</p>
+                            <p class="warningSignIn-text_email">Email not found. Please check the spelling (e.g. bart@gmail.com)</p>
                         </div>
                         <div class="password">
                             <input class="input-password" id="passwordSignIn" type="password" placeholder="Password" name="password" required>
                             <button href="#" class="password-control"></button>
-                            <p class="warningSignIn-text_pass">Password contain unsupported characters</p>
+                            <p class="warningSignIn-text_pass">Password contain unsupported characters. Must be at least 3 characters, including 1 number (e.g. 1qaz)</p>
                         </div>
                     
                         <button class="input-submit submit__signIn" type="submit" value="Sign In" data-name="/patient-board">Sign In</button>
