@@ -7,7 +7,9 @@ export class User {
         this.passwordConfirm = passwordConfirm;
     }
     setUserToLS() {
-        localStorage.setItem(this.email, JSON.stringify(this));
+        let patients = JSON.parse(localStorage.getItem('patients')) || [];
+        patients.push(this)
+        localStorage.setItem('patients', JSON.stringify(patients));
     }
 
 }

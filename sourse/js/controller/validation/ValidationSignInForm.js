@@ -5,11 +5,12 @@ export function validationSignInForm () {
 
     const warningTextEmail = document.querySelector('.warningSignIn-text_email');
     const warningTextPass = document.querySelector('.warningSignIn-text_pass');
+     
+    let userFromLS = JSON.parse(localStorage.getItem('patients'));
+    
+    for(let user of userFromLS) {
 
-    let usersFromLocalStorage = Object.keys(localStorage);
-
-    for(let user of usersFromLocalStorage) {
-        if( user !== signInEmail.value) {
+        if( user.email !== signInEmail.value) {
             signInEmail.classList.add('warningInput');
             warningTextEmail.classList.add('active');
             warningTextEmail.innerHTML = 'User is not found. Please Sign Up'
@@ -17,10 +18,8 @@ export function validationSignInForm () {
         } else {
             signInEmail.classList.remove('warningInput');
             warningTextEmail.classList.remove('active');
-            
-            let userFromLS = JSON.parse(localStorage.getItem(user));
 
-            if (userFromLS.password !== passwordSignIn.value) {
+            if (user.password !== passwordSignIn.value) {
                 passwordSignIn.classList.add('warningInput');
                 warningTextPass.classList.add('active');
                 return false;

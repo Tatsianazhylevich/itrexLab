@@ -41,8 +41,6 @@ const router = () => {
 
     const container = document.querySelector('.container');
     container.addEventListener('click', handleChange);
-    // const eyes = document.querySelectorAll('.password-control');
-    // eyes.forEach((eye) => eye.addEventListener('click', passwordControl));  
 }
 
 window.addEventListener('hashchange', router);
