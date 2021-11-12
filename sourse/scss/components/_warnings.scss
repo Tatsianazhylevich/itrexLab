@@ -1,14 +1,25 @@
-.warning {
+.warning-text_name,
+.warning-text_surname,
+.warning-text_email,
+.warning-text_pass,
+.warning-text_confirm,
+.warningSignIn-text_email,
+.warningSignIn-text_pass,
+.warningRestore-text_email {
+    display: none;
     position: absolute;
-    top: 65px;
-}
-.warning-text {
-    margin: 20px 0;
+    bottom: 5px;
     font-size: 13px;
     letter-spacing: -0.24px;
     color: #F6657F;
 }
 
 .warningInput {
+    position: relative;
     border: 1px solid #F6657F;
+}
+
+.active {
+    position: relative;
+    display: block;
 }

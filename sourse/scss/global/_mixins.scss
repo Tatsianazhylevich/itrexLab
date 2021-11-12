@@ -1,0 +1,117 @@
+@mixin bodyBackground {
+    max-width: 1792px;
+    height: 896px;
+    background-color: $greylight;
+    box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+    border-radius: 16px;
+}
+
+@mixin activeMenuItem {
+    background: $blue;
+    .item-link {
+        color: $white;
+    }
+}
+
+@mixin inActiveMenuItem {
+    background: $white;
+    .item-link {
+        color: $blue;
+    }
+}
+
+@mixin patientCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0px 40px;
+
+    background: $white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+}
+
+@mixin divider {
+    background: $solidgrey;
+    opacity: 0.5;
+    margin: 24px 0px;
+}
+
+@mixin name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: $black;
+}
+
+@mixin greyText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 130%;
+    color: $mediumgrey;
+}
+
+@mixin emptyText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: $mediumgrey;
+    text-align: center;
+}
+
+@mixin online {
+    width: 12px;
+    height: 12px;
+    background: $green;
+    border: 3px solid #E3EBFF;
+    border-radius: 50%;
+}
+
+@mixin card {
+    padding: 24px 32px 40px;
+    background: $white;
+    box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+    border-radius: 12px;
+}
+
+@mixin patientName {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 130%;
+    color: $black;
+}
+
+@mixin statusText {
+    margin-left: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 130%;
+    color: $mediumgrey;
+}
+
+@mixin dateText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: $black;
+}
+@mixin noteText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 140%;
+    color: $black;
+}

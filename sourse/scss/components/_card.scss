@@ -1,0 +1,138 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+
+.board_card-main {
+    display: flex;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    max-height: 680px;
+    list-style-type: none;
+    overflow-y: auto;
+}
+
+// ===========CARD===============
+
+.card-item {
+    width: 406px;
+    height: 264px;
+    margin-right: 20px;
+    margin-bottom: 24px;
+    @include card;
+}
+
+.card_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+}
+.card_header::before {
+    position: absolute;
+    top: 75px;
+    right: -32px;
+    content: '';
+    background-color: $solidgrey;
+    width: 406px;
+    height: 1px;
+}
+
+.card_header-info {
+    display: flex;
+}
+
+
+.card_header-foto {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.card_header-about {
+    margin: 11px 17px;
+}
+
+.card_header-name {
+    @include patientName;
+    margin-bottom: 5px;
+}
+
+.card_header-status {
+    display: flex;
+
+}
+
+.status {
+    @include online;
+}
+
+.status-text {
+    @include statusText;
+}
+
+.card_header-more {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
+}
+.card_header-more::before {
+    position: absolute;
+    content: '';
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
+}
+.card_header-more::after {
+    position: absolute;
+    content: '';
+    bottom: 7px;
+    width: 5px;
+    height: 5px;
+    background: $solidgrey;
+    border-radius: 50%;
+}
+
+// ==============MAIN===========
+
+.card_main {
+    display: flex;
+    flex-direction: column;
+    margin: 55px 0px 40px;
+}
+
+.card_main-date {
+    display: flex;
+}
+.card_main-note {
+    display: flex;
+    margin-top: 15px;
+}
+
+.date-icon {
+    width: 24px;
+    height: 24px;
+    background: url(/sourse/images/icons/clock-three.png) no-repeat center;
+}
+.note-icon {
+    width: 69px;
+    height: 24px;
+    background: url(/sourse/images/icons/clipboard-blank.png) no-repeat center;
+}
+
+.date-text {
+    margin-left: 15px;
+    @include dateText;
+}
+.note-text {
+    margin-left: 15px;
+    @include noteText;
+}

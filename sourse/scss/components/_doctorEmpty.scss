@@ -1,0 +1,140 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.wrapper {
+    position: relative;
+    max-width: 1920px;
+    height: 1024px;
+    padding: 0 64px;
+    background: $wrapperblue;
+}
+
+// ====================================HEADER===================================
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+// =============LOGO===============
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    .logo-img {
+        width: 29px;
+        height: 32px;
+        margin-right: 10px;
+    }
+    .logo-text {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+}
+
+// ==============DOCTOR=================
+
+.header_user {
+    display: flex;
+    align-items: center;
+}
+.header_user-info {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 16px;
+}   
+
+.header_user-name {
+    @include name;
+}
+.header_user-profession {
+    @include greyText;
+}
+.header_user-foto {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(/sourse/images/doctors/mirandaNelson.png) no-repeat;
+}
+
+.header_user-status {
+    position: absolute;
+    right: 0px;
+    @include online;
+}
+
+// ===================================MAIN======================================
+
+.main {
+    padding: 40px 0 40px 48px;
+    @include bodyBackground;
+}
+
+// ==================MENU===============
+
+.menu {
+    display: flex;
+}
+
+.menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.menu_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 32px rgba(218, 228, 255, 0.24));
+    @include inActiveMenuItem;
+}
+
+.item-link {
+    text-align: center;
+    text-decoration: none;
+    line-height: 140%;
+    font-size: 15px;
+}
+
+.activeMenuItem {
+    @include activeMenuItem;
+}
+
+// ==================BOARD===============
+
+.board_empty,
+.board_card {
+    margin-top: 56px;
+}
+
+.board_title {
+    color: $black;
+    font-size: 24px;
+}
+
+// =================EMPTY BOARD==========
+
+.board_empty-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 260px;
+}
+
+.board_empty-text {
+    margin-top: 35px;
+}
+
+.empty-text {
+    @include emptyText;
+}

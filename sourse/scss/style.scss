@@ -2,13 +2,14 @@
 @import './components/input';
 @import './components/warnings';
 @import './components/footer';
+@import './components/doctorEmpty';
+@import './components/card';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    
+    font-family: 'Poppins', sans-serif;  
 }
 
 .body {
@@ -75,9 +76,5 @@ form {
 .link-signIn, .link-signUp {
     margin-left: 20px;
 }
-
-
-
-
 
 @import './global/media';
